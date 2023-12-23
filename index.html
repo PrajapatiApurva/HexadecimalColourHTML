@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hex color generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-	<h1>Hex Color Generator</h1>
-	<div class="main">
-		<!-- To select the color -->
-		Color Picker: <input type="color"
-			id="colorPicker" value="#6a5acd">
+    <h1>Hex Color Generator</h1>
+    <div class="main">
+        <!-- To select the color -->
+        Color Picker: <input type="color" id="colorPicker" value="#ffffff">
 
-		<!-- To display hex code of the color -->
-		Hex Code: <input type="text" id="box">
-	</div>
-	<script>
-		function myColor() {
-			// Get the value return by color picker
-			var color = document.getElementById('colorPicker').value;
-			// Set the color as background
-			document.body.style.backgroundColor = color;
-
-			// Take the hex code
-			document.getElementById('box').value = color;
-		}
-		// When user clicks over color picker,
-		// myColor() function is called
-		document.getElementById('colorPicker')
-			.addEventListener('input', myColor);
-	</script>
+        <!-- To display hex code of the color -->
+        Hex Code: <input type="text" id="box" onkeydown="changeColor(event)" placeholder="#000000">
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
